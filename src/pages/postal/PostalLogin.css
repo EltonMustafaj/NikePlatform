@@ -1,0 +1,163 @@
+.postal-login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+}
+
+.postal-login-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.postal-login-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.postal-login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.postal-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.postal-login-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.postal-login-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.postal-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.postal-login-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.postal-login-form label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.postal-login-form input {
+    padding: 0.9rem 1.2rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.postal-login-form input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.error-message {
+    background: #fee;
+    color: #c33;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border-left: 4px solid #c33;
+}
+
+.btn-postal-login {
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-postal-login:hover:not(:disabled) {
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-postal-login:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.postal-login-footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.register-link {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #667eea;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.btn-link:hover {
+    color: #764ba2;
+}
+
+.btn-back-home {
+    background: none;
+    border: none;
+    color: #667eea;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-back-home:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .postal-login-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .postal-login-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .postal-icon {
+        font-size: 3rem;
+    }
+}

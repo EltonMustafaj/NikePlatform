@@ -1,0 +1,122 @@
+.postal-worker-management {
+    padding: 3rem 0;
+    min-height: 100vh;
+}
+
+.workers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.worker-card {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.worker-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.worker-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.worker-info {
+    text-align: left;
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+}
+
+.worker-info p {
+    margin: 0.75rem 0;
+    color: var(--text-secondary);
+}
+
+.worker-info strong {
+    color: var(--text-primary);
+    margin-right: 0.5rem;
+}
+
+.worker-date {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 1rem !important;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.btn-delete {
+    width: 100%;
+    padding: 0.875rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 2px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--radius-md);
+    color: #ef4444;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn-delete:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+}
+
+.no-workers {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.no-workers p {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.worker-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.worker-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.worker-form label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.worker-form input {
+    padding: 0.875rem 1.25rem;
+    background: var(--bg-secondary);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all var(--transition-normal);
+}
+
+.worker-form input:focus {
+    outline: none;
+    border-color: var(--nike-orange);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+@media (max-width: 768px) {
+    .workers-grid {
+        grid-template-columns: 1fr;
+    }
+}
