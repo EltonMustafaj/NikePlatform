@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { getProductById } from '../lib/api'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 import LoadingSpinner from '../components/LoadingSpinner'
 import './ProductDetail.css'
 
@@ -10,6 +11,7 @@ const ProductDetail = () => {
     const { id } = useParams()
     const navigate = useNavigate()
     const { addToCart } = useCart()
+    const { admin } = useAuth()
 
     const [product, setProduct] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -149,11 +151,11 @@ const ProductDetail = () => {
                         <motion.button
                             className="btn btn-primary btn-large btn-full add-to-cart-btn"
                             onClick={handleAddToCart}
-                            disabled={!selectedVariant}
-                            whileHover={{ scale: selectedVariant ? 1.02 : 1 }}
-                            whileTap={{ scale: selectedVariant ? 0.98 : 1 }}
+                            disabled={!selectedVariant || admin}
+                            whileHover={{ scale: (selectedVariant && !admin) ? 1.02 : 1 }}
+                            whileTap={{ scale: (selectedVariant && !admin) ? 0.98 : 1 }}
                         >
-                            {!selectedSize ? 'Zgjedh Madhësinë' : 'Shto në Shportë'}
+                            {admin ? 'Administratorët nuk mund të porosisin' : (!selectedSize ? 'Zgjedh Madhësinë' : 'Shto në Shportë')}
                         </motion.button>
                     </motion.div>
                 </div>

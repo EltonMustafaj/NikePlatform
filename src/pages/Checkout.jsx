@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 import { createCustomer, getCustomerByEmail, createOrder, createOrderItems, decrementStock } from '../lib/api'
 import './Checkout.css'
 
 const Checkout = () => {
     const navigate = useNavigate()
     const { cart, getCartTotal, clearCart } = useCart()
+    const { admin } = useAuth()
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -99,6 +101,13 @@ const Checkout = () => {
             navigate('/cart')
         }
     }, [cart.length, showSuccess, navigate])
+
+    // Prevent admins from accessing checkout
+    useEffect(() => {
+        if (admin) {
+            navigate('/')
+        }
+    }, [admin, navigate])
 
     return (
         <div className="checkout-page">

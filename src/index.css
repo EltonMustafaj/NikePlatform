@@ -399,10 +399,6 @@ label {
     background-position: -1000px 0;
   }
 
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  position: relative;
-  overflow: hidden;
 }
 
 .btn::before {

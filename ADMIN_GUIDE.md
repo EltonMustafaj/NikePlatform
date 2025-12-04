@@ -148,3 +148,69 @@ Nëse dëshiron të ndryshosh stokun për një produkt ekzistues:
 ---
 
 **Gëzuar menaxhimin e produkteve!** 🎉
+
+---
+
+## 📦 Menaxhimi i Postarëve
+
+### Hyrje në Menaxhim
+
+1. Nga Dashboard, kliko **"Menaxho Postarët"**
+2. Do të hapetfaqja e menaxhimit të postarëve
+
+### ⚠️ RËNDËSI: Vetëm Admini mund të krijojë postierë
+
+Postierët **NUK mund të regjistrohen vetë**. Kjo është një masë sigurie për të kontrolluar se kush ka akses në sistem.
+
+### Si të Shtosh një Postar të Ri
+
+1. Kliko butonin **"+ Shto Postar"** në krye
+2. Plotëso formën me të dhënat:
+   - **Emri i Plotë**: Emri dhe mbiemri i postarit (p.sh. "Agim Krasniqi")
+   - **Username**: Username për login (p.sh. "agim.k") - *Duhet të jetë unik*
+   - **Password**: Fjalëkalimi për login - *Ja jep këtë postarit*
+   - **Telefoni**: Numri i telefonit (opsional)
+3. Kliko **"Ruaj dhe Aprovo"**
+4. Postari krijohet me status **Aktiv** menjëherë dhe mund të kyçet
+
+### Tabs
+
+**Aktivë**: Shfaq të gjithë postierët që janë aktiv në sistem
+**Në Pritje**: Shfaq kërkesat për regjistrim (nëse ka)
+
+### Si Postari Kyçet
+
+Postari duhet të:
+1. Shkojë te: `http://localhost:5173/postal`
+2. Kyçet me **username** dhe **password** që i ke dhënë
+
+### Fshirja e një Postari
+
+1. Gjej postarin në listë
+2. Kliko butonin **🗑️ Fshij**
+3. Konfirmo fshirjen
+
+⚠️ **Kujdes**: Fshirja është e përhershme!
+
+### Shënime të Rëndësishme
+
+🔒 **Siguria**: Postierët nuk kanë akses në admin panel
+📝 **Kredencialet**: Ruaji mirë kredencialet që u jep postarëve
+👥 **Menaxhimi**: Vetëm admini mund të shtojë/fshijë postierë
+
+---
+
+## 🚫 Kufizimet për Adminin
+
+**Admini NUK mund të porosisë produkte!**
+
+- Kur je i kyçur si admin, butoni "Shto në Shportë" do të jetë i mbyllur
+- Mesazhi: "Administratorët nuk mund të porosisin"
+- Kjo është për të shmangur konfuzionin midis porosive reale dhe testeve
+
+Nëse dëshiron të testosh procesin e porosisë, duhet të kyçesh si klient (pa login).
+
+---
+
+Për më shumë detaje rreth menaxhimit të postarëve, shiko: **POSTAL_WORKERS_GUIDE.md**
+

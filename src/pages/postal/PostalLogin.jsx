@@ -112,15 +112,6 @@ const PostalLogin = () => {
                     </form>
 
                     <div className="postal-login-footer">
-                        <p className="register-link">
-                            Nuk ke llogari?{' '}
-                            <button
-                                className="btn-link"
-                                onClick={() => navigate('/postal/register')}
-                            >
-                                Regjistrohu këtu
-                            </button>
-                        </p>
                         <button
                             className="btn-back-home"
                             onClick={() => navigate('/')}

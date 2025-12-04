@@ -11,7 +11,6 @@ import ProductManagement from './pages/admin/ProductManagement'
 import OrderManagement from './pages/admin/OrderManagement'
 import PostalWorkerManagement from './pages/admin/PostalWorkerManagement'
 import PostalLogin from './pages/postal/PostalLogin'
-import PostalRegister from './pages/postal/PostalRegister'
 import PostalDashboard from './pages/postal/PostalDashboard'
 import { CartProvider } from './context/CartContext'
 import { AuthProvider } from './context/AuthContext'
@@ -41,7 +40,6 @@ function App() {
 
                                 {/* Postal Worker Routes */}
                                 <Route path="/postal" element={<PostalLogin />} />
-                                <Route path="/postal/register" element={<PostalRegister />} />
                                 <Route path="/postal/dashboard" element={<PostalDashboard />} />
                             </Routes>
                         </main>

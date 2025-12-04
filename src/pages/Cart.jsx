@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 import './Cart.css'
 
 const Cart = () => {
     const navigate = useNavigate()
     const { cart, removeFromCart, updateQuantity, getCartTotal, getCartCount } = useCart()
+    const { admin } = useAuth()
 
     const handleCheckout = () => {
         if (cart.length > 0) {
@@ -147,10 +149,11 @@ const Cart = () => {
                         <motion.button
                             className="btn btn-primary btn-full btn-large"
                             onClick={handleCheckout}
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
+                            disabled={admin}
+                            whileHover={{ scale: admin ? 1 : 1.02 }}
+                            whileTap={{ scale: admin ? 1 : 0.98 }}
                         >
-                            Vazhdo me Rezervimin
+                            {admin ? 'Administratorët nuk mund të porosisin' : 'Vazhdo me Rezervimin'}
                         </motion.button>
 
                         <button
